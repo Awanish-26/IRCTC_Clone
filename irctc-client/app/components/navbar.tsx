@@ -40,7 +40,7 @@ export default function Navbar() {
             />
             <div>
                 <div className="accesibilites px-4 flex w-full justify-center text-sm">
-                    <div className="m-2 px-2">{time}</div>
+                    <div className="m-2 px-2" suppressHydrationWarning>{time}</div>
                     <div className="m-2 px-2 border rounded">A <span className="text-sm">-</span></div>
                     <div className="m-2 px-2 border rounded">A</div>
                     <div className="m-2 px-2 border rounded">A <span className="text-sm">+</span></div>

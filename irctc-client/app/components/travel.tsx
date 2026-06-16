@@ -103,6 +103,8 @@ export default function Travel() {
                     ))}
                 </div>
             </section>
+
+            {/* Holiday Part */}
             <section className="mx-auto max-w-5xl px-4 py-10">
                 <h2 className="text-center text-xl font-extrabold uppercase tracking-wide text-black md:text-2xl">
                     Holidays
@@ -112,7 +114,7 @@ export default function Travel() {
                     {holidayPackages.map((packageItem) => (
                         <article
                             key={packageItem.title}
-                            className="group overflow-hidden border border-gray-200 bg-white shadow-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg"
+                            className="group overflow-hidden border border-gray-200 bg-white shadow-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg rounded"
                         >
                             <div className="relative h-48 w-full overflow-hidden">
                                 <Image
