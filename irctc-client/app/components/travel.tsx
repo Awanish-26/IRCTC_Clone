@@ -82,60 +82,62 @@ const socialNetworks = [
 
 export default function Travel() {
     return (
-        <div>
-            <section className="mx-auto max-w-5xl px-4 py-10 border-b-2 border-gray-500">
+        <div className="bg-slate-50">
+            <section id="services" className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
                 <div className="text-center">
-                    <h2 className="text-2xl font-bold md:text-3xl">
+                    <p className="text-sm font-semibold uppercase tracking-[0.3em] text-slate-500">Services</p>
+                    <h2 className="mt-3 text-2xl font-bold text-slate-900 sm:text-3xl">
                         Have you not found the right one?
                         <br />
                         Find a service suitable for you here.
                     </h2>
                 </div>
 
-                <div className="mt-10 grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-5">
+                <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
                     {services.map(({ label, icon: Icon }) => (
-                        <div key={label} className="flex flex-col items-center">
-                            <div className="flex h-16 w-16 items-center justify-center rounded-full border border-gray-700 text-3xl text-gray-800 hover:bg-blue-500 hover:text-white">
+                        <div key={label} className="flex flex-col items-center rounded-3xl border border-slate-200 bg-white p-4 shadow-sm transition-transform hover:-translate-y-1 hover:shadow-lg">
+                            <div className="flex h-16 w-16 items-center justify-center rounded-full border border-slate-200 bg-slate-50 text-3xl text-slate-800 transition-colors hover:bg-cyan-500 hover:text-white">
                                 <Icon />
                             </div>
-                            <p className="mt-3 text-center text-xs font-semibold">{label}</p>
+                            <p className="mt-3 text-center text-xs font-semibold tracking-wide text-slate-700">{label}</p>
                         </div>
                     ))}
                 </div>
             </section>
 
             {/* Holiday Part */}
-            <section className="mx-auto max-w-5xl px-4 py-10">
-                <h2 className="text-center text-xl font-extrabold uppercase tracking-wide text-black md:text-2xl">
+            <section className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+                <h2 className="text-center text-xl font-extrabold uppercase tracking-[0.3em] text-slate-900 md:text-2xl">
                     Holidays
                 </h2>
 
-                <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="mt-8 grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
                     {holidayPackages.map((packageItem) => (
                         <article
                             key={packageItem.title}
-                            className="group overflow-hidden border border-gray-200 bg-white shadow-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg rounded"
+                            className="group overflow-hidden rounded-[1.5rem] border border-slate-200 bg-white shadow-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-xl"
                         >
-                            <div className="relative h-48 w-full overflow-hidden">
+                            <div className="relative h-52 w-full overflow-hidden sm:h-56">
                                 <Image
                                     src={packageItem.image}
                                     alt={packageItem.title}
                                     fill
                                     className="object-cover transition-transform duration-500 group-hover:scale-105"
-                                    sizes="(max-width: 1024px) 50vw, 33vw"
+                                    sizes="(max-width: 1280px) 50vw, 33vw"
                                 />
+                                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/60 via-slate-950/10 to-transparent" />
                             </div>
 
-                            <div className="flex min-h-44 flex-col px-3 py-4">
-                                <h3 className="text-lg font-bold text-gray-900">
+                            <div className="flex min-h-44 flex-col px-4 py-4">
+                                <h3 className="text-lg font-bold text-slate-900">
                                     {packageItem.title}
                                 </h3>
-                                <p className="mt-2 text-[14px] leading-5 text-gray-600">
+                                <p className="mt-2 text-sm leading-6 text-slate-600">
                                     {packageItem.description}
                                 </p>
                                 <a
                                     href="#"
-                                    className="mt-auto pt-4 text-[11px] font-semibold text-black hover:text-blue-700"
+                                    className="mt-auto pt-4 text-xs font-semibold uppercase tracking-wide text-cyan-700 transition-colors hover:text-cyan-900"
                                 >
                                     Read More →
                                 </a>
@@ -145,8 +147,8 @@ export default function Travel() {
                 </div>
             </section>
 
-            <section className="border-y border-white/20 bg-linear-to-r from-[#2f2250] via-[#4d2b7a] to-[#9c4d97] px-18 py-4 text-white">
-                <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 md:flex-row md:gap-8">
+            <section className="border-y border-white/20 bg-linear-to-r from-[#2f2250] via-[#4d2b7a] to-[#9c4d97] px-4 py-5 text-white sm:px-6 lg:px-8">
+                <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 md:flex-row md:gap-8">
                     <p className="text-center text-sm font-semibold md:text-base">
                         Get Connected with us on social networks
                     </p>
